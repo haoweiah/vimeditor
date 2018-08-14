@@ -1,0 +1,30 @@
+ubuntu 安装 terminator
+
+sudo apt install terminator
+如果报错提示：apt-get -f install
+按照操作即可
+
+terminator配置文件
+~/.config/terminator/config
+    
+    [global_config]
+    title_font = Ubuntu Mono 11[keybindings]
+    [layouts]
+    [[default]]
+    [[[child1]]]
+    parent = window0
+    type = Terminal
+    [[[window0]]]
+    parent = ""
+    type = Window
+    [plugins]
+    [profiles]
+    [[default]]
+    background_color = "#002b36"
+    background_darkness = 0.91
+    background_image = None
+    background_type = transparent
+    font = Ubuntu Mono 11
+    foreground_color = "#e0f0f1"
+    use_system_font = False
+    show_titlebar = False 
