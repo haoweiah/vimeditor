@@ -16,10 +16,11 @@ filetype plugin on
 " 显示行号                                                      
 set number                                                      
 " 在第64列显示竖线                                                      
-set cc=72                                                          
+"set cc=72                                                          
 " 高亮显示当前行                                                   
-set cursorline                                                     
-                                                                   
+set cursorline 
+    hi CursorLine cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+    hi CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
 " 设置各种缩进                                                     
 set tabstop=4                                                      
 set softtabstop=4                                                  
