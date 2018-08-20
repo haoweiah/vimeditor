@@ -37,11 +37,32 @@ set expandtab
 " 将ESC键映射为两次j键 
 inoremap jj <Esc> 
 
-" 自动完成大括号 
-imap { {<CR>}<Esc>kA<CR>
 
 "
 set laststatus=2
 highlight StatusLine cterm=bold ctermfg=yellow ctermbg=blue
-set statusline=[%F]%y%r%m%*%=[Line:%l%L,Column:%c][%p%%]
+set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
 set ruler
+
+" plug 插件
+if empty(glob('~/.vim/autoload/plug.vim'))
+   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/jiangmiao/auto-pairs.git'
+Plug 'https://github.com/godlygeek/tabular.git'
+Plug 'https://github.com/yianwillis/vimcdoc.git'
+Plug 'https://github.com/iamcco/markdown-preview.vim.git'
+Plug 'https://github.com/Valloric/YouCompleteMe.git'
+Plug 'https://github.com/tpope/vim-endwise.git'
+call plug#end()
+
+
+" 设置按键区域
+
+nmap <silent> <F8> <Plug>MarkdownPreview        " for normal mode
+imap <silent> <F8> <Plug>MarkdownPreview        " for insert mode
+nmap <silent> <F9> <Plug>StopMarkdownPreview    " for normal mode
+imap <silent> <F9> <Plug>StopMarkdownPreview    " for insert mode
