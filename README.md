@@ -1,6 +1,7 @@
 " 简单的vim配置
 " 简单的terminator配置
 安装plugn时可以在前面加上这个配置
+
 if empty(glob('~/.vim/autoload/plug.vim'))                                  
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
