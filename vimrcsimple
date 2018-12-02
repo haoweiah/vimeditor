@@ -47,6 +47,12 @@ let g:Powerline_symbols = 'fancy'
 "let g:instant_markdown_allow_unsafe_content = 1
 "let g:instant_markdown_allow_external_content = 0
 
+if empty(glob('~/.vim/autoload/plug.vim'))                                  
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif 
+
 call plug#begin('~/.vim/plugged')
 "Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 "Plug 'kannokanno/previm'
