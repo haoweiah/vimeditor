@@ -54,5 +54,5 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'suan/vim-instant-markdown'
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdonw'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
