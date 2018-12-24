@@ -2,6 +2,7 @@ ubuntu 安装 terminator
 
 sudo apt install terminator
 如果报错提示：apt-get -f install
+    这个操作是安装依赖的
 按照操作即可
 
 terminator配置文件
